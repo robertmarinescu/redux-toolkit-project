@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+
       <div className='container'>
         <div className='reservation-container'>
           <div>
@@ -30,6 +31,7 @@ function App() {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
