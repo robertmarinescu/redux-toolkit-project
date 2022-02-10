@@ -12,10 +12,6 @@ function App() {
 
   const dispatch = useDispatch()
 
-  // const handleSetReservationNameInput = (event: any) => {
-  //   setReservationNameInput(event.target.value)
-  // }
-
   const handleAddReservations = () => {
     if (!reservationNameInput) return;
     dispatch(addReservation(reservationNameInput))
@@ -30,7 +26,7 @@ function App() {
           <div>
             <h5 className='reservation-header'>Reservations</h5>
             <div className='reservation-cards-container'>
-              {reservations.map((name, idx) => <ReservationCard key={idx} name={name} />)}
+              {reservations.map((name, idx) => <ReservationCard key={idx} name={name} index={idx} />)}
             </div>
           </div>
           <div className='reservation-input-container'>
