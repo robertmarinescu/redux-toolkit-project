@@ -1,15 +1,17 @@
 import React from 'react'
 
 interface CustomerCardTypes {
-  name: string
+  id: string,
+  name: string,
+  food: string[]
 }
 
-function CustomerCard({ name }: CustomerCardTypes) {
+function CustomerCard({ id, name, food }: CustomerCardTypes) {
   return (
     <div className='customer-food-card-container'>
       <p>{name}</p>
       <div className='customer-foods-container'>
-        <div className='customer-food-container'>
+        <div className='customer-food'>
         </div>
         <div className='customer-food-input-container'>
           <input />

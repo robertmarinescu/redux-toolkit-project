@@ -8,8 +8,13 @@ import { addReservation } from './features/reservationSlice'
 
 function App() {
 
-  const reservations = useSelector((state: RootState) => state.reservations.value)
-  const customers = useSelector((state: RootState) => state.customers.value)
+  const reservations = useSelector(
+    (state: RootState) => state.reservations.value
+  )
+
+  const customers = useSelector(
+    (state: RootState) => state.customers.value
+  )
 
   const [reservationNameInput, setReservationNameInput] = useState('')
   const [orderNameInput, setOrderNameInput] = useState('')
@@ -43,7 +48,7 @@ function App() {
         </div>
 
         <div className='customer-food-container'>
-          {customers.map((customer, idx) => <CustomerCard key={idx} name={customer} />)}
+          {customers.map((customer, idx) => <CustomerCard key={idx} id={customer.id} name={customer.name} food={customer.food} />)}
         </div>
 
       </div>
