@@ -1,4 +1,3 @@
-import React from 'react'
 import { useDispatch } from 'react-redux'
 import { removeReservation } from '../features/reservationSlice'
 import { addCustomer } from '../features/customerSlice'

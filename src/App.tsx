@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 import { RootState } from './app/store';
@@ -17,7 +17,6 @@ function App() {
   )
 
   const [reservationNameInput, setReservationNameInput] = useState('')
-  const [orderNameInput, setOrderNameInput] = useState('')
 
   const dispatch = useDispatch()
 
@@ -31,6 +30,7 @@ function App() {
     <div className="App">
 
       <div className='container'>
+
         <div className='reservation-container'>
           <div>
             <h5 className='reservation-header'>Reservations</h5>
